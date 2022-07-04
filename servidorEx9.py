@@ -4,7 +4,7 @@ HOST = 'localhost'
 PORT = 15000
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(HOST,PORT))
+s.bind((HOST,PORT))
 
 s.listen()
 
@@ -14,7 +14,7 @@ conn, ender = s.accept()
 
 pint('Conectado em', ender)
 
-while True
+while True:
     data = conn.recv(1024)
 
     if not data:
@@ -139,6 +139,6 @@ while True
         if (vcarta == 13):
             data = 'rei de espadas'
 
-    data = str.encode(str(vcarta) + ' ' +  str(naipe))
+    data = str.encode(str(data))
 
     conn.sendall(data)
