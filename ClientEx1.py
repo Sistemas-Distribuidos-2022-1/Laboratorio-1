@@ -17,7 +17,7 @@ s.sendall(str.encode(msg))
 data = s.recv(1024)
 
 data = data.decode()
-nome, cargo, salario = data.split(' ')
+nome, cargo, salario = data.split('|')
 
 
 print('Cargo: ', cargo)
