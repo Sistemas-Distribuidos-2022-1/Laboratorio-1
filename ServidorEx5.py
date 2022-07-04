@@ -40,6 +40,6 @@ while True:
                 else:
                     data = 'adulto'
 
-    data = str.encode(str(Idade))
+    data = str.encode(data)
 
     conn.sendall(data)
