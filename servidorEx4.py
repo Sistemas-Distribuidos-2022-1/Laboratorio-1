@@ -4,7 +4,7 @@ HOST = 'localhost'
 PORT = 15000
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(HOST,PORT)
+s.bind((HOST,PORT))
 
 s.listen()
 
@@ -24,7 +24,7 @@ while True:
 
     data = data.decode()
 
-    Altura, Sexo= data.split(' ')
+    Altura, Sexo= data.split('|')
 
     Altura = float(Altura)
 
@@ -32,9 +32,9 @@ while True:
 
     if Sexo == 'masculino':
         data = (72.7*Altura) - 58
-    else
+    else:
         data = (62,1*Altura) -44,7
 
-    data = str.encode(str(Altura) + ' ' + Sexo)
+    data = str.encode(data)
 
     conn.sendall(data)
