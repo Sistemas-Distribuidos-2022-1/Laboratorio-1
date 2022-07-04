@@ -19,8 +19,6 @@ data = s.recv(1024)
 
 data = data.decode()
 
-Nome, Nível, salariobruto, numerodep = data.split(' ')
-
 print('salario liquido: ' data)
 print('Nome: 'Nome)
 print('Nível: ', Nivel)
