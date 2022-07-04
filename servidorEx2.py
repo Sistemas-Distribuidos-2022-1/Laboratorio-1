@@ -4,7 +4,7 @@ HOST = 'localhost'
 PORT = 15000
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(HOST,PORT)
+s.bind((HOST,PORT))
 
 s.listen()
 
@@ -26,17 +26,19 @@ while True:
 
     nome, sexo, idade = data.split('|')
 
-    idade  int(idade)
+    idade = int(idade)
 
     if sexo == 'masculino':
         if idade > 18:
             data = 'maioridade'
-        else
+        else:
             data = 'menor'
     if sexo == 'feminimo':
         if idade > 21:
             data = 'maioridade'
-        else
+        else:
             data = 'menor'
+    
+    data = str.encode(data)
 
     conn.sendall(data)
