@@ -24,15 +24,15 @@ while True:
 
     data = data.decode()
 
-    nome, cargo, sal = data.split(' ')
+    nome, cargo, salario = data.split('|')
 
-    sal = float(sal)
+    salario = float(salario)
 
     if cargo == 'operador':
-        sal = salario + salario*0.2
+        salario = salario + salario*0.2
     if cargo == 'programador':
-        sal = salario + salario*0.18
+        salario = salario + salario*0.18
 
-    data = str.encode(nome + ' ' + cargo + ' ' + str(sal))
+    data = str.encode(nome + '|' + cargo + '|' + str(salario))
 
     conn.sendall(data)
