@@ -4,7 +4,7 @@ HOST = 'localhost'
 PORT = 15000
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(HOST,PORT))
+s.bind((HOST,PORT))
 
 s.listen()
 
@@ -14,7 +14,7 @@ conn, ender = s.accept()
 
 pint('Conectado em', ender)
 
-while True
+while True:
     data = conn.recv(1024)
 
     if not data:
@@ -35,6 +35,6 @@ while True
     if saldo >= 201 and saldo <= 400:
         data = saldo*0,2
 
-    data = str.encode(str(saldo))
+    data = str.encode(str(data))
 
     conn.sendall(data)
