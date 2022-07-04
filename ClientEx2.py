@@ -17,11 +17,10 @@ s.sendall(str.encode(msg))
 data = s.recv(1024)
 
 data = data.decode()
-nome, sexo, idade = data.split(' ')
-
 
 print('nome: ', nome)
 print('sexo: ', sexo)
+
 if data == 'maioridade':
     print('Atingiu maioridade')
 else:
