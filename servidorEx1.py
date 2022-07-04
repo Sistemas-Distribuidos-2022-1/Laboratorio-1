@@ -4,7 +4,7 @@ HOST = 'localhost'
 PORT = 15000
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(HOST,PORT)
+s.bind((HOST,PORT))
 
 s.listen()
 
