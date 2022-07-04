@@ -34,6 +34,6 @@ while True
     else:
         data = 'Trabalhar'
 
-    data = str.encode(Nome + ' ' + Nivel + ' ' + str(salariobruto) + ' ' + str(numerodep))
+    data = str.encode(str(Idade) + ' ' + str(Tempo))
 
     conn.sendall(data)
