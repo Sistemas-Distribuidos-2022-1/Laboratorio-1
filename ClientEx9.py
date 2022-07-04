@@ -17,7 +17,5 @@ data = s.recv(1024)
 
 data = data.decode()
 
-vcarta, naipe = data.split(' ')
-
 
 print('Carta: ', data)
