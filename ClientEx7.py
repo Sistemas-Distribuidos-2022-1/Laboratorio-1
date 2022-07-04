@@ -17,8 +17,6 @@ data = s.recv(1024)
 
 data = data.decode()
 
-Idade, Tempo = data.split(' ')
-
 
 if data == 'Aposentar'
     print('Funcionario pode se aposentar')
