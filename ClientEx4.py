@@ -16,6 +16,5 @@ s.sendall(str.encode(msg))
 data = s.recv(1024)
 
 data = data.decode()
-Altura, Sexo = data.split(' ')
 
 print('Peso: ' data)
