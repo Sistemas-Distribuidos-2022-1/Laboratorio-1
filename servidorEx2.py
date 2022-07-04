@@ -24,7 +24,7 @@ while True:
 
     data = data.decode()
 
-    nome, sexo, idade = data.split(' ')
+    nome, sexo, idade = data.split('|')
 
     idade  int(idade)
 
@@ -38,7 +38,5 @@ while True:
             data = 'maioridade'
         else
             data = 'menor'
-
-    data = str.encode(nome + ' ' + sexo + ' ' + str(idade))
 
     conn.sendall(data)
