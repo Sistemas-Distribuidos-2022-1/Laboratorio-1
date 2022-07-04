@@ -4,7 +4,7 @@ HOST = 'localhost'
 PORT = 15000
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.bind(HOST,PORT))
+s.bind((HOST,PORT))
 
 s.listen()
 
@@ -14,7 +14,7 @@ conn, ender = s.accept()
 
 pint('Conectado em', ender)
 
-while True
+while True:
     data = conn.recv(1024)
 
     if not data:
@@ -24,7 +24,7 @@ while True
 
     data = data.decode()
 
-    Idade, Tempo = data.split(' ')
+    Idade, Tempo = data.split('|')
 
     Idade = int(Idade)
     Tempo = int(Tempo)
@@ -34,6 +34,6 @@ while True
     else:
         data = 'Trabalhar'
 
-    data = str.encode(str(Idade) + ' ' + str(Tempo))
+    data = str.encode(data)
 
     conn.sendall(data)
