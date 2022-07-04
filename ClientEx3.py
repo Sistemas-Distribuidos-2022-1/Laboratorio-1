@@ -17,7 +17,6 @@ s.sendall(str.encode(msg))
 data = s.recv(1024)
 
 data = data.decode()
-N1, N2, N3 = data.split(' ')
 
 
 if data == 'Aprovado':
