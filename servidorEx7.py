@@ -34,6 +34,6 @@ while True:
     else:
         data = 'Trabalhar'
 
-    data = str.encode(data)
+    data = str.encode(str(data))
 
     conn.sendall(data)
