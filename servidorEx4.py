@@ -35,6 +35,6 @@ while True:
     else:
         data = (62,1*Altura) -44,7
 
-    data = str.encode(data)
+    data = str.encode(str(data))
 
     conn.sendall(data)
